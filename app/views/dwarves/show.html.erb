@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @dwarf.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @dwarf.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_dwarf_path(@dwarf) %> |
+<%= link_to 'Back', dwarves_path %>

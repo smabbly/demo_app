@@ -1,0 +1,25 @@
+<h1>Listing tooths</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tooths.each do |tooth| %>
+  <tr>
+    <td><%= tooth.name %></td>
+    <td><%= tooth.email %></td>
+    <td><%= link_to 'Show', tooth %></td>
+    <td><%= link_to 'Edit', edit_tooth_path(tooth) %></td>
+    <td><%= link_to 'Destroy', tooth, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tooth', new_tooth_path %>

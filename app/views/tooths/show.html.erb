@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @tooth.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @tooth.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_tooth_path(@tooth) %> |
+<%= link_to 'Back', tooths_path %>

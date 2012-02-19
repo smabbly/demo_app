@@ -1,0 +1,27 @@
+<h1>Listing foots</h1>
+
+<table>
+  <tr>
+    <th>Foot</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @foots.each do |foot| %>
+  <tr>
+    <td><%= foot.Foot %></td>
+    <td><%= foot.name %></td>
+    <td><%= foot.email %></td>
+    <td><%= link_to 'Show', foot %></td>
+    <td><%= link_to 'Edit', edit_foot_path(foot) %></td>
+    <td><%= link_to 'Destroy', foot, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Foot', new_foot_path %>
